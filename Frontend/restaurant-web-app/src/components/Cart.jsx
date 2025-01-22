@@ -1,8 +1,7 @@
 // src/components/Cart.js
 
-import React from 'react';
-import './styles/Cart.css';
-
+import React from "react";
+import "../styles/Cart.css";
 
 const Cart = ({ cartItems, removeFromCart, totalAmount }) => {
   return (
@@ -14,7 +13,9 @@ const Cart = ({ cartItems, removeFromCart, totalAmount }) => {
         <ul>
           {cartItems.map((item) => (
             <li key={item.id}>
-              <p>{item.name} - ${item.price}</p>
+              <p>
+                {item.name} - ${item.price}
+              </p>
               <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </li>
           ))}

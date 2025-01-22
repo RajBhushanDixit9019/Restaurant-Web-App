@@ -1,12 +1,12 @@
 // File path: src/components/ReservationForm.jsx
 // Description: Allows users to choose a date, time, and party size for table reservation.
 
-import React, { useState, useEffect } from 'react';
-import './styles/customer/ReservationForm.css';
+import React, { useState, useEffect } from "react";
+import "../../styles/customer/ReservationForm.css";
 
 const ReservationForm = () => {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [partySize, setPartySize] = useState(1);
   const [availableSlots, setAvailableSlots] = useState([]);
 
@@ -25,16 +25,16 @@ const ReservationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('/api/reservations', {
-      method: 'POST',
+    const response = await fetch("/api/reservations", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ date, time, partySize }),
     });
 
     if (response.ok) {
-      alert('Reservation Confirmed!');
+      alert("Reservation Confirmed!");
     }
   };
 

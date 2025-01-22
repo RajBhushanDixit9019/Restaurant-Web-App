@@ -1,15 +1,15 @@
 // File path: src/components/ReservationTrackingPage.jsx
 // Description: Displays the user's upcoming and past reservations.
 
-import React, { useEffect, useState } from 'react';
-import './styles/customer/ReservationTrackingPage.css';
+import React, { useEffect, useState } from "react";
+import "../../styles/customer/ReservationTrackingPage.css";
 
 const ReservationTrackingPage = () => {
   const [reservations, setReservations] = useState([]);
 
   useEffect(() => {
     const fetchReservations = async () => {
-      const response = await fetch('/api/reservations');
+      const response = await fetch("/api/reservations");
       const data = await response.json();
       setReservations(data);
     };

@@ -1,8 +1,8 @@
 // File path: src/components/MenuPage.jsx
 // Description: Fetches and displays the menu items with their description, price, and an "Add to Cart" button.
 
-import React, { useState, useEffect } from 'react';
-import './styles/customer/MenuPage.css';
+import React, { useState, useEffect } from "react";
+import "../../styles/customer/MenuPage.css";
 
 const MenuPage = () => {
   const [menuItems, setMenuItems] = useState([]);
@@ -10,7 +10,7 @@ const MenuPage = () => {
 
   useEffect(() => {
     const fetchMenu = async () => {
-      const response = await fetch('/api/menu');
+      const response = await fetch("/api/menu");
       const data = await response.json();
       setMenuItems(data);
     };

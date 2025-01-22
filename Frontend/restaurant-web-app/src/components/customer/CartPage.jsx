@@ -1,21 +1,21 @@
 // File path: src/components/CartPage.jsx
 // Description: Displays the items added to the cart and provides an option to proceed to checkout.
 
-import React from 'react';
-import './styles/customer/CartPage.css';
+import React from "react";
+import "../../styles/customer/CartPage.css";
 
 const CartPage = ({ cart }) => {
   const handleCheckout = async () => {
-    const response = await fetch('/api/orders', {
-      method: 'POST',
+    const response = await fetch("/api/orders", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ items: cart }),
     });
 
     if (response.ok) {
-      alert('Order placed successfully!');
+      alert("Order placed successfully!");
     }
   };
 

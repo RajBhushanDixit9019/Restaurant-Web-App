@@ -1,7 +1,7 @@
 // src/components/MenuItem.js
 
-import React from 'react';
-import './styles/MenuItem.css';
+import React from "react";
+import "../styles/MenuItem.css";
 
 const MenuItem = ({ item, addToCart }) => {
   return (

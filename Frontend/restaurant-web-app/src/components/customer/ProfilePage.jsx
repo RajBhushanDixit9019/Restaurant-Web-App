@@ -1,19 +1,19 @@
 // File path: src/components/ProfilePage.jsx
 // Description: Allows users to view and update their profile information (name, contact, etc.)
 
-import React, { useEffect, useState } from 'react';
-import './styles/customer/ProfilePage.css';
+import React, { useEffect, useState } from "react";
+import "../../styles/customer/ProfilePage.css";
 
 const ProfilePage = () => {
   const [user, setUser] = useState({});
-  const [name, setName] = useState('');
-  const [contact, setContact] = useState('');
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
 
   useEffect(() => {
     const fetchUserProfile = async () => {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem("token");
       if (!token) return;
-      const response = await fetch('/api/user/profile', {
+      const response = await fetch("/api/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -29,18 +29,18 @@ const ProfilePage = () => {
 
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem('token');
-    const response = await fetch('/api/user/update', {
-      method: 'PUT',
+    const token = localStorage.getItem("token");
+    const response = await fetch("/api/user/update", {
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ name, contact }),
     });
 
     if (response.ok) {
-      alert('Profile updated successfully!');
+      alert("Profile updated successfully!");
     }
   };
 

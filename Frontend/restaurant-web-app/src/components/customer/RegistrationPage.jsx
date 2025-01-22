@@ -1,36 +1,35 @@
 // File path: src/components/RegistrationPage.jsx
 // Description: Handles user registration, collects user data and sends it to the backend for registration.
 
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import "./styles/customer/RegistrationPage.css";
-
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import "../../styles/customer/RegistrationPage.css";
 
 const RegistrationPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const history = useHistory();
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
+      const response = await fetch("/api/register", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ name, email, password }),
       });
       const data = await response.json();
       if (response.ok) {
-        history.push('/login');
+        history.push("/login");
       } else {
         setErrorMessage(data.message);
       }
     } catch (error) {
-      setErrorMessage('An error occurred');
+      setErrorMessage("An error occurred");
     }
   };
 

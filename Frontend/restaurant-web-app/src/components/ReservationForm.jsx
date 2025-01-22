@@ -1,11 +1,11 @@
 // src/components/ReservationForm.js
 
-import React, { useState } from 'react';
-import './styles/ReservationForm.css';
+import React, { useState } from "react";
+import "../styles/ReservationForm.css";
 
 const ReservationForm = ({ handleReservation }) => {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [partySize, setPartySize] = useState(2);
 
   const handleSubmit = (e) => {

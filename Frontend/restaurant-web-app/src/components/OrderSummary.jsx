@@ -1,7 +1,7 @@
 // src/components/OrderSummary.js
 
-import React from 'react';
-import './styles/OrderSummary.css';
+import React from "react";
+import "../styles/OrderSummary.css";
 
 const OrderSummary = ({ cartItems, totalAmount, placeOrder }) => {
   return (
@@ -10,7 +10,9 @@ const OrderSummary = ({ cartItems, totalAmount, placeOrder }) => {
       <ul>
         {cartItems.map((item) => (
           <li key={item.id}>
-            <p>{item.name} - ${item.price}</p>
+            <p>
+              {item.name} - ${item.price}
+            </p>
           </li>
         ))}
       </ul>
