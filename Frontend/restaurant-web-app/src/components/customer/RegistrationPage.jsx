@@ -2,7 +2,7 @@
 // Description: Handles user registration, collects user data and sends it to the backend for registration.
 
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import "../../styles/customer/RegistrationPage.css";
 
 const RegistrationPage = () => {

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+import img from '../assets/img.jpg';
 import "../styles/LandingPage.css";
 
 const LandingPage = () => {
@@ -13,17 +14,17 @@ const LandingPage = () => {
             Your one-stop solution for fine dining and seamless reservations.
           </p>
           <div className="hero-buttons">
-            <Link to="/menu" className="btn-primary">
+            <a to="/menu" className="btn-primary">
               Explore Menu
-            </Link>
-            <Link to="/reservation" className="btn-secondary">
+            </a>
+            <a to="/reservation" className="btn-secondary">
               Make a Reservation
-            </Link>
+            </a>
           </div>
         </div>
         <div className="hero-image">
           <img
-            src="https://example.com/hero-image.jpg"
+            src={img}
             alt="Fine dining experience"
           />
         </div>
@@ -34,12 +35,12 @@ const LandingPage = () => {
         <h2>Get Started</h2>
         <p>Log in or create a new account to access personalized features.</p>
         <div className="auth-buttons">
-          <Link to="/login" className="btn-auth">
+          <a to="/login" className="btn-auth">
             Login
-          </Link>
-          <Link to="/register" className="btn-auth">
+          </a>
+          <a to="/register" className="btn-auth">
             Register
-          </Link>
+          </a>
         </div>
       </div>
 

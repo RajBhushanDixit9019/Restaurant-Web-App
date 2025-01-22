@@ -2,7 +2,7 @@
 // Description: Handles user login, authenticates user with backend, and stores JWT token for sessions.
 
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import "../../styles/customer/LoginPage.css";
 
 const LoginPage = () => {

@@ -1,8 +1,24 @@
+/* General Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --font-color: #333;
+    --background-color: #f8f9fa;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 0;
+}
+
 /* Landing Page Base */
 .landing-page {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f8f9fa;
     padding: 20px;
 }
 
@@ -13,8 +29,8 @@
     justify-content: space-between;
     padding: 50px 20px;
     background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     margin-bottom: 40px;
 }
 
@@ -46,30 +62,31 @@
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition);
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #28a745;
+    background-color: var(--secondary-color);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #218838;
+    background-color: darken(var(--secondary-color), 10%);
 }
 
 .btn-secondary {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #0056b3;
+    background-color: darken(var(--primary-color), 10%);
 }
 
 .hero-image img {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
 }
 
@@ -78,14 +95,14 @@
     text-align: center;
     background-color: #fff3e0;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     margin-bottom: 40px;
 }
 
 .auth-section h2 {
     font-size: 2rem;
-    color: #333;
+    color: var(--font-color);
     margin-bottom: 10px;
 }
 
@@ -104,16 +121,16 @@
 .btn-auth {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #333;
+    background-color: var(--font-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 .btn-auth:hover {
-    background-color: #555;
+    background-color: darken(var(--font-color), 10%);
 }
 
 /* Features Section */
@@ -128,8 +145,8 @@
     text-align: center;
     background-color: white;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 .feature-card h2 {
