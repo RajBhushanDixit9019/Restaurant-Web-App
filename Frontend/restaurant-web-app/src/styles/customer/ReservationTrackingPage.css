@@ -1,0 +1,15 @@
+/* File path: src/styles/ReservationTrackingPage.css */
+
+.reservation-tracking-container {
+    padding: 20px;
+  }
+  
+  .reservation-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .reservation-item p {
+    margin: 5px 0;
+  }
+  

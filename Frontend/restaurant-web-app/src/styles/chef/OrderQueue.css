@@ -1,0 +1,31 @@
+/* src/styles/chef/OrderQueue.css */
+
+.order-queue {
+    margin-bottom: 20px;
+  }
+  
+  .order-queue ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-queue li {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .order-queue li.in-progress {
+    background-color: #ffeb3b;
+  }
+  
+  .order-queue li.pending {
+    background-color: #ff5722;
+  }
+  
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

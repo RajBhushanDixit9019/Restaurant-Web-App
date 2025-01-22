@@ -1,0 +1,30 @@
+.cart {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #666;
+}
+
+.cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}

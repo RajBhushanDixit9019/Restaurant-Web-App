@@ -1,0 +1,17 @@
+/* src/styles/admin/ReservationManagement.css */
+
+.reservation-management {
+    padding: 20px;
+  }
+  
+  .reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .reservation-table th, .reservation-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  

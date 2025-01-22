@@ -1,0 +1,63 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the full-page container with Instagram gradient */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background: linear-gradient(to right, #f58529, #f77737, #d9a7c7, #6a82fb); /* Instagram gradient */
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden; /* Prevent the animation from scrolling */
+}
+
+/* Heading styles */
+.heading {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styles with modern color scheme */
+.button {
+  background: linear-gradient(to right, #4e73df, #1c3d8a); /* Blue gradient */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+  box-shadow: 0 4px 8px rgba(28, 61, 138, 0.3); /* Subtle shadow for a modern feel */
+}
+
+/* Button hover animation */
+.button:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  background: linear-gradient(to right, #375aab, #2d4575); /* Lighter shade of blue for hover effect */
+  box-shadow: 0 6px 12px rgba(28, 61, 138, 0.5); /* Slightly stronger shadow on hover */
+}
+
+/* Button active state */
+.button:active {
+  transform: scale(1); /* Reset size on click */
+  box-shadow: none; /* Remove shadow when clicked */
+}
+
+/* Confetti styling */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure confetti doesn't block interactions */
+}

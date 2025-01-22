@@ -1,0 +1,57 @@
+/* src/styles/admin/UserManagement.css */
+
+.user-management {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .user-management h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  .user-table td {
+    background-color: #fff;
+  }
+  
+  .user-table button {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-table button:hover {
+    background-color: #1976D2;
+  }
+  
+  .user-table .admin {
+    color: #4caf50;
+  }
+  
+  .user-table .chef {
+    color: #ff9800;
+  }
+  

@@ -1,0 +1,22 @@
+/* src/styles/admin/MenuManagement.css */
+
+.menu-management {
+    padding: 20px;
+  }
+  
+  .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .menu-table th, .menu-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .add-item-form input, .add-item-form button {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  

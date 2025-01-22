@@ -1,0 +1,15 @@
+/* File path: src/styles/OrderTrackingPage.css */
+
+.order-tracking-container {
+    padding: 20px;
+  }
+  
+  .order-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .order-item p {
+    margin: 5px 0;
+  }
+  

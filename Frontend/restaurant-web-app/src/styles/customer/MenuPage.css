@@ -1,0 +1,21 @@
+/* File path: src/styles/MenuPage.css */
+
+.menu-container {
+    padding: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  .menu-item span {
+    font-weight: bold;
+  }
+  

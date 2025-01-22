@@ -1,0 +1,13 @@
+/* src/styles/chef/OrderManagementDashboard.css */
+
+.order-management-dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .order-management-dashboard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

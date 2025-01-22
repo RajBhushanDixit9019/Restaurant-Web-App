@@ -1,0 +1,62 @@
+/* src/styles/admin/OrderOversight.css */
+
+.order-oversight {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .order-oversight h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .order-table th, .order-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  .order-table td {
+    background-color: #fff;
+  }
+  
+  .order-table button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-table button:hover {
+    background-color: #45a049;
+  }
+  
+  .order-table .status {
+    font-weight: bold;
+    color: #ff9800;
+  }
+  
+  .order-table .completed {
+    color: #4caf50;
+  }
+  
+  .order-table .in-progress {
+    color: #ff5722;
+  }
+  

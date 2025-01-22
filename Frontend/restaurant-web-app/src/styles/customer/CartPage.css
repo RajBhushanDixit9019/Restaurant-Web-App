@@ -1,0 +1,25 @@
+/* File path: src/styles/CatPage.css */
+
+.cat-container {
+    padding: 20px;
+  }
+  
+  .cat-item {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .cat-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .cat-item h3 {
+    font-size: 1.2rem;
+  }
+  
