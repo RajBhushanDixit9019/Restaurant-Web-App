@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import "@/styles/customer/RegistrationPage.css";
+import "./styles/customer/RegistrationPage.css";
 
 
 const RegistrationPage = () => {

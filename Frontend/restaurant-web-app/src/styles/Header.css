@@ -2,31 +2,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #1e1e1e, #444);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
     font-size: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-logo {
-    font-weight: bold;
-    font-size: 22px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffcc00;
+    text-decoration: none;
     cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-logo:hover {
+    color: #fff;
+    transform: scale(1.1);
 }
 
 .header-nav {
     display: flex;
-    gap: 15px;
-    flex-direction: row;
+    gap: 20px;
+    align-items: center;
 }
 
 .header-nav-item {
+    position: relative;
     cursor: pointer;
     text-decoration: none;
-    color: white;
+    color: #ddd;
     font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
 }
 
 .header-nav-item:hover {
     color: #ffcc00;
+}
+
+.header-nav-item:hover::after {
+    width: 100%;
+}
+
+.header-nav-item.active {
+    color: #ffcc00;
+}
+
+.header-nav-item.active::after {
+    width: 100%;
 }

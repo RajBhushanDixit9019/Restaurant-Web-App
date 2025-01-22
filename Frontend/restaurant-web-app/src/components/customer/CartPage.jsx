@@ -2,7 +2,7 @@
 // Description: Displays the items added to the cart and provides an option to proceed to checkout.
 
 import React from 'react';
-import '@/styles/customer/CartPage.css';
+import './styles/customer/CartPage.css';
 
 const CartPage = ({ cart }) => {
   const handleCheckout = async () => {

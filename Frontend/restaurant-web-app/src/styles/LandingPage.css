@@ -1,19 +1,97 @@
+/* Landing Page Base */
+.landing-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+}
+
+.hero-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* Authentication Section */
 .auth-section {
-    margin-top: 40px;
     text-align: center;
     background-color: #fff3e0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
 .auth-section h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .auth-section p {
     font-size: 1rem;
+    color: #666;
     margin-bottom: 20px;
 }
 
@@ -36,4 +114,31 @@
 
 .btn-auth:hover {
     background-color: #555;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-card {
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h2 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
 }

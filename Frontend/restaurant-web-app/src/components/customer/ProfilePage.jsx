@@ -2,7 +2,7 @@
 // Description: Allows users to view and update their profile information (name, contact, etc.)
 
 import React, { useEffect, useState } from 'react';
-import '@/styles/customer/ProfilePage.css';
+import './styles/customer/ProfilePage.css';
 
 const ProfilePage = () => {
   const [user, setUser] = useState({});

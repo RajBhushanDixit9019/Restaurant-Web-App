@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import '@/styles/customer/LoginPage.css';
+import './styles/customer/LoginPage.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');

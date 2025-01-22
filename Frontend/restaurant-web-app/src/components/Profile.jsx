@@ -1,7 +1,7 @@
 // src/components/Profile.js
 
 import React, { useState } from 'react';
-import '@/styles/Profile.css';
+import './styles/Profile.css';
 
 const Profile = ({ user, updateProfile }) => {
   const [name, setName] = useState(user.name);

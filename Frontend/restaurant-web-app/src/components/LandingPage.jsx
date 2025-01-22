@@ -1,19 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '@/styles/LandingPage.css';
+import '../../styles/LandingPage.css';
 
 const LandingPage = () => {
     return (
         <div className="landing-page">
+            {/* Hero Section */}
             <div className="hero-section">
-                <h1>Welcome to Gourmet Delight</h1>
-                <p>Your one-stop solution for fine dining and seamless reservations.</p>
-                <div className="hero-buttons">
-                    <Link to="/menu" className="btn-primary">Explore Menu</Link>
-                    <Link to="/reservation" className="btn-secondary">Make a Reservation</Link>
+                <div className="hero-content">
+                    <h1 className="hero-title">Welcome to Gourmet Delight</h1>
+                    <p className="hero-subtitle">
+                        Your one-stop solution for fine dining and seamless reservations.
+                    </p>
+                    <div className="hero-buttons">
+                        <Link to="/menu" className="btn-primary">Explore Menu</Link>
+                        <Link to="/reservation" className="btn-secondary">Make a Reservation</Link>
+                    </div>
+                </div>
+                <div className="hero-image">
+                    <img 
+                        src="https://example.com/hero-image.jpg" 
+                        alt="Fine dining experience" 
+                    />
                 </div>
             </div>
 
+            {/* Authentication Section */}
             <div className="auth-section">
                 <h2>Get Started</h2>
                 <p>Log in or create a new account to access personalized features.</p>
@@ -23,6 +35,7 @@ const LandingPage = () => {
                 </div>
             </div>
 
+            {/* Features Section */}
             <div className="features">
                 <div className="feature-card">
                     <h2>Discover Our Menu</h2>

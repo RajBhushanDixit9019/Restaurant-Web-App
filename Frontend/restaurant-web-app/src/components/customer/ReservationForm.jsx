@@ -2,7 +2,7 @@
 // Description: Allows users to choose a date, time, and party size for table reservation.
 
 import React, { useState, useEffect } from 'react';
-import '@/styles/customer/ReservationForm.css';
+import './styles/customer/ReservationForm.css';
 
 const ReservationForm = () => {
   const [date, setDate] = useState('');

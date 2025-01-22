@@ -2,7 +2,7 @@
 // Description: Displays the user's upcoming and past reservations.
 
 import React, { useEffect, useState } from 'react';
-import '@/styles/customer/ReservationTrackingPage.css';
+import './styles/customer/ReservationTrackingPage.css';
 
 const ReservationTrackingPage = () => {
   const [reservations, setReservations] = useState([]);

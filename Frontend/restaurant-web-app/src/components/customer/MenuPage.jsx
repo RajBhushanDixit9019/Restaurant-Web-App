@@ -2,7 +2,7 @@
 // Description: Fetches and displays the menu items with their description, price, and an "Add to Cart" button.
 
 import React, { useState, useEffect } from 'react';
-import '@/styles/customer/MenuPage.css';
+import './styles/customer/MenuPage.css';
 
 const MenuPage = () => {
   const [menuItems, setMenuItems] = useState([]);

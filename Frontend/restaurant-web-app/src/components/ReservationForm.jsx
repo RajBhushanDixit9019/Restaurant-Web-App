@@ -1,7 +1,7 @@
 // src/components/ReservationForm.js
 
 import React, { useState } from 'react';
-import '@/styles/ReservationForm.css';
+import './styles/ReservationForm.css';
 
 const ReservationForm = ({ handleReservation }) => {
   const [date, setDate] = useState('');

@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import Confetti from "react-confetti";
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage'; // Ensure this path is correct
+import MenuPage from './components/customer/MenuPage'; // Replace with the actual component for the Menu
+import ReservationForm from './components/customer/ReservationForm'; // Replace with the actual component for Reservations
+import LoginPage from './components/customer/LoginPage'; // Replace with the actual Login component
+import RegisterationPage from './components/customer/RegisterationPage'; // Replace with the actual Register component
 
 const App = () => {
-  const [celebrate, setCelebrate] = useState(false);
+    return (
+        <Router>
+            <Routes>
+                {/* Landing Page as the default route */}
+                <Route path="/" element={<LandingPage />} />
 
-  const handleGetStarted = () => {
-    setCelebrate(true);
-    setTimeout(() => setCelebrate(false), 5000); // Stop confetti after 5 seconds
-  };
-
-  return (
-    <div className="container">
-      <h1 className="heading">Welcome to Our App!</h1>
-      <button className="button" onClick={handleGetStarted}>
-        Get Started
-      </button>
-      {celebrate && <Confetti />}
-    </div>
-  );
+                {/* Other Routes */}
+                <Route path="/menu" element={<MenuPage />} />
+                <Route path="/reservation" element={<ReservationForm />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterationPage />} />
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;

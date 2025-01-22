@@ -1,7 +1,7 @@
 // src/components/Cart.js
 
 import React from 'react';
-import '@/styles/Cart.css';
+import './styles/Cart.css';
 
 
 const Cart = ({ cartItems, removeFromCart, totalAmount }) => {

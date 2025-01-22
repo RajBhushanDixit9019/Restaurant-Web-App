@@ -1,7 +1,7 @@
 // src/components/OrderSummary.js
 
 import React from 'react';
-import '@/styles/OrderSummary.css';
+import './styles/OrderSummary.css';
 
 const OrderSummary = ({ cartItems, totalAmount, placeOrder }) => {
   return (

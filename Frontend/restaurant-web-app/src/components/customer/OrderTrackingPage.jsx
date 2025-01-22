@@ -2,7 +2,7 @@
 // Description: Displays the user's current orders and their status.
 
 import React, { useEffect, useState } from 'react';
-import '@/styles/customer/OrderTrackingPage.css';
+import './styles/customer/OrderTrackingPage.css';
 
 const OrderTrackingPage = () => {
   const [orders, setOrders] = useState([]);
