@@ -1,24 +1,36 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --font-color: #333;
+    --background-color: #f8f9fa;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s ease-in-out;
+}
+
 .footer {
-    background-color: #333;
+    background-color: var(--font-color);
     color: white;
     text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
+    padding: 20px 0;
     width: 100%;
     font-size: 14px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    transition: var(--transition);
 }
 
 .footer-links {
-    margin-top: 5px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .footer-link {
-    color: #ffcc00;
+    color: var(--primary-color);
     text-decoration: none;
+    transition: var(--transition);
 }
 
 .footer-link:hover {

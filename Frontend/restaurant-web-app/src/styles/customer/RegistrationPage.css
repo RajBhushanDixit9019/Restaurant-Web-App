@@ -1,8 +1,10 @@
 /* File path: src/styles/RegistrationPage.css */
-
+Header,Footer{
+  width: 1150px;
+}
 .register-container {
     max-width: 500px;
-    margin: 50px auto;
+    margin: 10px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -17,7 +19,7 @@
   form button {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
     border-radius: 4px;
   }
   

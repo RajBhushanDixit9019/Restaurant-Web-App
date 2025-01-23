@@ -1,15 +1,12 @@
-// File path: src/components/LoginPage.jsx
-// Description: Handles user login, authenticates user with backend, and stores JWT token for sessions.
-
 import React, { useState } from "react";
-//import { useHistory } from "react-router-dom";
 import "../../styles/customer/LoginPage.css";
+import Header from "../Header";
+import Footer from "../Footer";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const history = useHistory();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -24,7 +21,7 @@ const LoginPage = () => {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem("token", data.token);
-        history.push("/profile");
+        // handle successful login here
       } else {
         setErrorMessage(data.message);
       }
@@ -34,27 +31,37 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      {errorMessage && <p>{errorMessage}</p>}
-    </div>
+    <>
+      <div id="header">
+      <Header />
+      </div>
+      <div className="login-container">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin} className="login-form">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="login-input"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="login-input"
+          />
+          <button type="submit" className="login-button">Login</button>
+        </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+      </div>
+      <div id="footer">
+      <Footer />
+      </div>
+    </>
   );
 };
 

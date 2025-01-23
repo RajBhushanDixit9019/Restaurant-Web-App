@@ -1,48 +1,35 @@
-// src/components/Header.js
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#" target="_blank">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              Menu
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              Cart
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              Order Tracking
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              Profile
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              Reservations
-            </a>
-          </li>
-        </ul>
+    <header className="header">
+      <Link to="/" className="header-logo">
+        My Restaurant
+      </Link>
+      <nav className="header-nav">
+        <Link to="/" className="header-nav-item">
+          Home
+        </Link>
+        <Link to="/menu" className="header-nav-item">
+          Menu
+        </Link>
+        <Link to="/cart" className="header-nav-item">
+          Cart
+        </Link>
+        <Link to="/order-tracking" className="header-nav-item">
+          Order Tracking
+        </Link>
+        <Link to="/profile" className="header-nav-item">
+          Profile
+        </Link>
+        <Link to="/reservations" className="header-nav-item">
+          Reservations
+        </Link>
       </nav>
     </header>
   );
 };
 
-export default Header;
+export default Header; 

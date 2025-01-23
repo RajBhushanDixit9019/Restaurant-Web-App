@@ -1,32 +1,28 @@
 import React from "react";
-//import { Link } from "react-router-dom";
-import img from '../assets/img.jpg';
+import Header from "./Header";
+import Footer from "./Footer"
+import img from "../assets/img.jpg";
 import "../styles/LandingPage.css";
+import LoginPage from "../components/customer/LoginPage";
+import RegistrationPage from "../components/customer/RegistrationPage";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
+   <>
+   <Header/>
     <div className="landing-page">
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome to Gourmet Delight</h1>
+          <h1 className="hero-title">Welcome to Our Restaurant</h1>
           <p className="hero-subtitle">
             Your one-stop solution for fine dining and seamless reservations.
           </p>
-          <div className="hero-buttons">
-            <a to="/menu" className="btn-primary">
-              Explore Menu
-            </a>
-            <a to="/reservation" className="btn-secondary">
-              Make a Reservation
-            </a>
-          </div>
         </div>
+       
         <div className="hero-image">
-          <img
-            src={img}
-            alt="Fine dining experience"
-          />
+          <img src={img} alt="Fine dining experience" />
         </div>
       </div>
 
@@ -35,12 +31,12 @@ const LandingPage = () => {
         <h2>Get Started</h2>
         <p>Log in or create a new account to access personalized features.</p>
         <div className="auth-buttons">
-          <a to="/login" className="btn-auth">
+          <Link to="/login" className="btn-auth">
             Login
-          </a>
-          <a to="/register" className="btn-auth">
+          </Link>
+          <Link to="/register" className="btn-auth">
             Register
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -65,6 +61,8 @@ const LandingPage = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
