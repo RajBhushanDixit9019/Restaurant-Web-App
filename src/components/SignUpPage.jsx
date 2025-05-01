@@ -18,7 +18,7 @@ function SignupPage() {
         <input type="email" placeholder="Your Email" />
         <input type="password" placeholder="Password" />
         <input type="password" placeholder="Confirm Password" />
-        <button className="signup-heading-button">Sign Up</button>
+        <button className="signup-submit-button">Sign Up</button>
       </form>
     </div>
   );

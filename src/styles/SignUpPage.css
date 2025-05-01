@@ -2,9 +2,16 @@
 .signup-container {
   background-color: #dedede;
   min-height: 100vh;
-  padding: 30px 20px;
+  width: 100%;
+  padding:  20px;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 
@@ -68,8 +75,10 @@
   border: none;
   outline: none;
   font-size: 16px;
-
+  text-align: center;
+  background-color: #FFFFFF;
   opacity: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
 }
@@ -99,11 +108,10 @@
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
-
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
-  animation-delay: 1.6s;
+  animation-delay: 1.2s;
 }
 
 .signup-submit-button:hover {
