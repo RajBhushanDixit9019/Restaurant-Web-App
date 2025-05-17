@@ -1,9 +1,27 @@
+/* RestaurantSignup.css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Keyframes for animations */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Sign Up Page Styles */
 .signup-container {
   background-color: #dedede;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
-  padding:  20px;
+  padding: 10px;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
@@ -12,8 +30,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* Animate the restaurant name */
 .restaurant-name {
@@ -21,7 +40,6 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
-
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
@@ -29,76 +47,110 @@
 }
 
 /* Animate the main heading button */
-.signup-heading-button {
+.signup-header {
   background-color: #F4511E;
+  width: 100%;
   color: white;
-  border: 3px solid blue;
   padding: 12px 50px;
-  font-size: 20px;
-  font-weight: 600;
   border-radius: 10px;
   margin-bottom: 20px;
   cursor: pointer;
-
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
   animation-delay: 0.4s;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
 }
 
 /* Animate the subtext */
-.signup-subtext {
+.signup-description {
   font-weight: 600;
   margin: 20px auto;
   width: 90%;
   max-width: 500px;
-
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
   animation-delay: 0.6s;
 }
 
-.signup-form {
+.form-container {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
+.form-group {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  position: relative;
+  margin-bottom: 8px;
+}
+
 
 /* Animate each input field with stagger */
-.signup-form input {
-  width: 300px;
-  padding: 12px;
-  border-radius: 20px;
-  border: none;
+.input-field {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: 2px solid transparent;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
   text-align: center;
   background-color: #FFFFFF;
   opacity: 0;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
+
 /* Staggered delays for inputs */
-.signup-form input:nth-child(1) {
+.form-group:nth-child(1) .input-field {
   animation-delay: 0.8s;
 }
-.signup-form input:nth-child(2) {
+.form-group:nth-child(2) .input-field {
   animation-delay: 1s;
 }
-.signup-form input:nth-child(3) {
+.form-group:nth-child(3) .input-field {
   animation-delay: 1.2s;
 }
-.signup-form input:nth-child(4) {
+.form-group:nth-child(4) .input-field {
   animation-delay: 1.4s;
 }
 
+.input-field:focus {
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.5);
+}
+
+.input-error {
+  border: 2px solid #ef4444;
+}
+
+/* Error message */
+.error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  text-align: center;
+  width: 300px;
+}
+
 /* Animate the submit button */
-.signup-submit-button {
+.submit-button {
   background-color: #34a853;
   color: white;
   border: none;
@@ -111,9 +163,24 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
-  animation-delay: 1.2s;
+  animation-delay: 1.6s;
 }
 
-.signup-submit-button:hover {
+.submit-button:hover {
   background-color: #2c8b44;
+}
+
+.submit-button:disabled {
+  background-color: #86efac;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: white;
+  height: 60px;
+  padding: 1.5rem 0;
+  margin-top: auto;
+  border-radius: 30px 30px 0 0;
 }

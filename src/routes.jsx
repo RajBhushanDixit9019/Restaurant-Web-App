@@ -5,6 +5,7 @@ import App from './App';
 import Login from './components/LoginPage.jsx';
 import SignUp from './components/SignUpPage.jsx';
 import AboutUs from './components/AboutUs.jsx';
+import RestaurantDashboard from './components/RestaurantDashboard.jsx';
 
 // Main application routes
 function AppRoutes() {
@@ -15,6 +16,7 @@ function AppRoutes() {
         <Route path="/aboutus" element={<AboutUs/>}></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<RestaurantDashboard />} />
       </Routes>
     </BrowserRouter>
   );
