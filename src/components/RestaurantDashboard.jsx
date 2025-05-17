@@ -1,29 +1,49 @@
 import { useState } from 'react';
-import { Home, User, Calendar, ShoppingBag, Clock, Settings, Menu, X, ChevronRight, Bell } from 'lucide-react';
+import { Home, User, Calendar, ShoppingBag, Clock, Settings, Menu, X, ChevronRight, Bell, UtensilsCrossed, ReceiptText, ShoppingCart, Loader2, LayoutDashboard} from 'lucide-react';
+
 import '../styles/RestaurantDashboard.css';
 
 export default function RestaurantDashboard() {
   const [collapsed, setCollapsed] = useState(false);
   const [activePage, setActivePage] = useState('home');
+  const [loading, setLoading] = useState(false);
   
   // Sample data for the dashboard
   const upcomingReservations = [];
   const recentOrders = [];
   const favoriteItems = [];
 
-  const navItems = [
-    { id: 'home', icon: <Home size={20} />, label: 'Dashboard' },
-    { id: 'menu', icon: <ShoppingBag size={20} />, label: 'Menu' },
-    { id: 'orders', icon: <Clock size={20} />, label: 'Orders' },
-    { id: 'cart', icon: <Calendar size={20} />, label: 'Cart' },
-    { id: 'profile', icon: <User size={20} />, label: 'Profile' }
-  ];
+ const navItems = [
+  { id: 'home', icon: <Home size={20} />, label: 'Dashboard' },
+  { id: 'menu', icon: <UtensilsCrossed size={20} />, label: 'Menu' },
+  { id: 'orders', icon: <ReceiptText size={20} />, label: 'Orders' },
+  { id: 'cart', icon: <ShoppingCart size={20} />, label: 'Cart' },
+  { id: 'profile', icon: <User size={20} />, label: 'Profile' }
+];
+
   
   const toggleSidebar = () => {
     setCollapsed(!collapsed);
   };
+
+  // loader handler..
+  const handleNavigation = (id) => {
+    setLoading(true);
+    setTimeout(() => {
+      setActivePage(id);
+      setLoading(false);
+    }, 800);
+  }
   
   const renderContent = () => {
+    if(loading){
+      return(
+        <div className="loading-container">
+          <Loader2 className= "spinner" size ={48}/>
+          <p>Loading...</p>
+        </div>
+      );
+    }
     switch (activePage) {
       case 'home':
         return (
@@ -181,7 +201,7 @@ export default function RestaurantDashboard() {
       {/* Sidebar */}
       <div className={`sidebar ${collapsed ? 'sidebar-collapsed' : ''}`}>
         <div className="sidebar-header">
-          {!collapsed && <h1 className="brand-name">Bella Italia</h1>}
+          {!collapsed && <h1 className="brand-name">GoodBites</h1>}
           <button 
             onClick={toggleSidebar} 
             className="sidebar-toggle"
@@ -195,9 +215,9 @@ export default function RestaurantDashboard() {
             {navItems.map(item => (
               <li key={item.id}>
                 <button
-                  onClick={() => setActivePage(item.id)}
+                  onClick={() => handleNavigation(item.id)}
                   className={`nav-item ${collapsed ? 'nav-item-collapsed' : ''} ${
-                    activePage === item.id 
+                    activePage === item.id && !loading
                       ? 'nav-item-active' 
                       : ''
                   }`}
