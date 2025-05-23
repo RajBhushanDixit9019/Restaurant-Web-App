@@ -1,0 +1,658 @@
+/* Chef Dashboard Styles - Harmonized with Login Page Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.nav-item {
+  color: var(--text-dark); /* Dark text */
+  background-color: #ffffff; /* White background */
+}
+
+.nav-item-active {
+  background-color: var(--primary-dark); /* Dark background */
+  color: var(--text-light); /* White text */
+}
+
+.header-title {
+  color: var(--primary-dark); /* Dark text */
+  background-color: white; /* White background */
+}
+
+:root {
+  /* Colors from login page */
+  --primary-color: #00796b;
+  --primary-dark: #004d40;
+  --primary-light: #e0f7fa;
+  --accent-color: #80cbc4;
+  --error-color: #d32f2f;
+  --text-dark: #000000; /* Changed to pure black for better visibility */
+  --text-light: #ffffff;
+  --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* Dashboard Container */
+.chef-dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-light);
+}
+
+/* Sidebar Styles */
+.chef-sidebar {
+  background-color: white;
+  box-shadow: var(--shadow);
+  width: 16rem;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.chef-sidebar-collapsed {
+  width: 4rem;
+}
+
+.chef-sidebar-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  border-top-right-radius: 15px;
+}
+
+.chef-brand-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+
+.chef-sidebar-toggle {
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.chef-sidebar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Navigation */
+.chef-nav-container {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.chef-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 10px;
+}
+
+.chef-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  width: 90%;
+  margin: 7px auto;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  border-radius: 25px; /* Matching login page rounded elements */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.chef-nav-item:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 150, 136, 0.4); /* Match login input focus */
+}
+
+.chef-nav-item-collapsed {
+  justify-content: center;
+  padding: 0.75rem;
+  width: auto;
+}
+
+.chef-nav-item-active {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.chef-nav-icon {
+  margin-right: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.chef-nav-item-active .chef-nav-icon {
+  color: var(--text-light);
+}
+
+/* Sidebar Footer */
+.chef-sidebar-footer {
+  padding: 1rem;
+  background-color: white;
+  border-bottom-right-radius: 15px;
+}
+
+.chef-support-box {
+  padding: 0.75rem;
+  background-color: var(--primary-light);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+
+.chef-support-text {
+  color: var(--primary-dark);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.chef-support-btn {
+  background-color: var(--primary-dark);
+  color: white;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 20px; /* Match login page button style */
+  font-size: 0.875rem;
+  font-weight: bold; /* Match login page button style */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chef-support-btn:hover {
+  background-color: #00251a;
+}
+
+/* Main Content Area */
+.chef-main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chef-main-header {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 15px;
+}
+
+.chef-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.chef-header-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.chef-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Notification Button */
+.chef-notification-btn {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-dark);
+}
+
+.chef-notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--error-color);
+  border-radius: 50%;
+}
+
+/* User Info */
+.chef-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chef-user-avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--card-shadow);
+}
+
+.chef-user-name {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Main Content */
+.chef-main-content {
+  flex: 1;
+  overflow: auto;
+  padding: 1.5rem;
+  background-color: var(--primary-light); /* Using login page background color */
+}
+
+/* Orders Container */
+.chef-orders-container {
+  padding: 1rem;
+}
+
+.chef-dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 700; /* Match login page font weight */
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center; /* Matching login page centered text */
+}
+
+/* Status Tabs */
+.chef-order-status-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+}
+
+.chef-status-tab {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px; /* Match login page rounded style */
+  background-color: white;
+  border: 2px solid var(--primary-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.chef-status-tab.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Orders Grid */
+.chef-orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Order Cards */
+.chef-order-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow); /* Using login page shadow */
+  border-left: 6px solid var(--primary-color);
+  transition: transform 0.3s ease;
+  animation: fadeSlideUp 1s ease forwards; /* Adding login page animation */
+  animation-delay: 0.2s;
+}
+
+.chef-order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 150, 136, 0.4); /* Match login input focus */
+}
+
+.chef-order-card.pending {
+  border-left-color: #f59e0b;
+}
+
+.chef-order-card.preparing {
+  border-left-color: #3b82f6;
+}
+
+.chef-order-card.ready {
+  border-left-color: #10b981;
+}
+
+/* Order Header */
+.chef-order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px dashed var(--primary-light);
+}
+
+.chef-order-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.chef-order-time {
+  font-weight: 600;
+}
+
+.chef-order-table {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Order Items */
+.chef-order-items {
+  margin: 1rem 0;
+}
+
+.chef-order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--primary-light);
+}
+
+.chef-order-item:last-child {
+  border-bottom: none;
+}
+
+.chef-item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chef-item-quantity {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.chef-item-name {
+  font-weight: 600;
+}
+
+/* Item Status */
+.chef-item-status {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 25px; /* Match login page rounded style */
+  font-weight: 500;
+}
+
+.chef-item-status.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.chef-item-status.preparing {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.chef-item-status.ready {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Action Buttons */
+.chef-action-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px; /* Match login button rounded style */
+  font-size: 0.8rem;
+  font-weight: bold; /* Match login page button style */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.chef-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chef-start-btn {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.chef-complete-btn {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Order Footer */
+.chef-order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 2px dashed var(--primary-light);
+}
+
+.chef-order-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.chef-status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 25px; /* Match login page rounded style */
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.chef-status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.chef-status-badge.preparing {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.chef-status-badge.ready {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Bulk Action Buttons */
+.chef-start-all-btn, 
+.chef-complete-all-btn,
+.chef-served-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px; /* Match login button rounded style */
+  font-size: 0.85rem;
+  font-weight: bold; /* Match login page button style */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chef-start-all-btn {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.chef-complete-all-btn {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.chef-served-btn {
+  background-color: #80cbc4; /* Match login disabled button */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Kitchen Status */
+.chef-kitchen-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.chef-status-indicator {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.chef-status-text {
+  color: #555;
+  font-weight: 600; /* Match login page font weight */
+}
+
+/* Loading State */
+.chef-loading-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.chef-spinner {
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Empty State */
+.chef-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+  animation: fadeSlideUp 1s ease forwards; /* Added login page animation */
+  animation-delay: 0.6s;
+}
+
+.chef-empty-icon {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+.chef-empty-title {
+  font-size: 1.5rem;
+  font-weight: 700; /* Match login page font weight */
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.chef-empty-text {
+  color: #333; /* Match login page text color */
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  font-weight: 600; /* Match login page description */
+}
+
+/* Footer to match login page footer */
+.chef-footer {
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  padding: 10px;
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 1.4s;
+}
+
+/* Animations - kept from login page */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .chef-sidebar {
+    width: 5rem;
+  }
+  
+  .chef-brand-name,
+  .chef-nav-item span {
+    display: none;
+  }
+  
+  .chef-nav-item {
+    justify-content: center;
+    padding: 0.75rem;
+  }
+  
+  .chef-nav-icon {
+    margin-right: 0;
+  }
+  
+  .chef-orders-grid {
+    grid-template-columns: 1fr;
+  }
+}
